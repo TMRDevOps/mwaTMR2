@@ -32,6 +32,14 @@
 
 	</properties>
 
+	<!-- added proxy server -->
+
+	<repository>
+		<id>nexus</id>
+		<name>Nexus Proxy Repo</name>
+		<url>http://172.31.7.162:8081/repository/teslaproxy/</url>
+	</repository>
+
 	<dependencies>
 		
 		<dependency>
@@ -81,7 +89,7 @@
 			<artifactId>spring-webmvc</artifactId>
 			<version>${spring.version}</version>
 		</dependency>
-		
+
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-context</artifactId>
@@ -100,17 +108,17 @@
 	</dependencies>
 	
 	<distributionManagement>
-	
+	<!-- used private IP for Nexus -->
 	    <repository>
 	      <id>nexus</id>
 	      <name>Mithun Technologies Releases Nexus Repository</name>
-	      <url>http://13.235.103.28:8081/repository/flipkart-releases/</url>
+	      <url>http://172.31.7.162:8081/repository/tesla-releases/</url>
 	    </repository>
 	    
 	    <snapshotRepository>
 	      <id>nexus</id>
 	      <name>Mithun Technologies Snapshot Nexus Repository </name>
-	      <url>http://13.235.103.28:8081/repository/flipkart-snapshot/</url>
+	      <url>http://172.31.7.162:8081/repository/tesla-snapshot/</url>
 	    </snapshotRepository>
 	    
 	</distributionManagement>
