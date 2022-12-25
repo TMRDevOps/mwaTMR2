@@ -4,7 +4,7 @@ node {
 
 					
 	stage ('1cloneCode'){  //called stage 1
-        sh "rm -rf ./*"
+        //sh "rm -rf ./*"
         git credentialsId: 'TMRDevOps', url: 'https://github.com/TMRDevOps/mwaTMR2.git'
 
 	}
@@ -14,6 +14,9 @@ node {
 	}
 	stage ('3codeQuality'){
 		sh "${mavenHome}/bin/mvn clean sonar:sonar"  //runs maven from tool kit -> Maven not installed on server
-		
-    }
+	}
+
+	stage('4UploadArtifacts'){
+ 	sh "${mavenHome}/bin/mvn deploy"
+ 	}
 }
