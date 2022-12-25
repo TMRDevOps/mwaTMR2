@@ -15,7 +15,10 @@ node
   
   stage("CheckOutCodeGit")
   {
-   git branch: 'master', credentialsId: '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', url: 'https://github.com/TMRDevOps/mwaTMR2.git'
+    sh "git clone https://github.com/TMRDevOps/mwaTMR2.git"
+
+
+  //  git branch: 'master', credentialsId: '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', url: 'https://github.com/TMRDevOps/mwaTMR2.git'
  }
  
  stage("Build")
