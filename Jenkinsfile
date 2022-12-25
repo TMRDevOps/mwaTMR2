@@ -24,7 +24,11 @@ node
  
  stage("Build")
  {
- sh "${mavenHome}/bin/mvn clean package"
+    withMaven {
+      sh "mvn clean package"
+    }
+
+//  sh "${mavenHome}/bin/mvn clean package"
  }
  
   /*
