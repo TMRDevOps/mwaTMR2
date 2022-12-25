@@ -15,7 +15,8 @@ node
   
   stage("CheckOutCodeGit")
   {
-    sh "git clone https://github.com/TMRDevOps/mwaTMR2.git"
+    sh "rm -rf ./*"
+    git credentialsId: 'TMRDevOps', url: 'https://github.com/TMRDevOps/mwaTMR2.git'
 
 
   //  git branch: 'master', credentialsId: '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', url: 'https://github.com/TMRDevOps/mwaTMR2.git'
