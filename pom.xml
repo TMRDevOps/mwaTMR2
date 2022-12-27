@@ -33,12 +33,16 @@
 	</properties>
 
 	<!-- added proxy server -->
+	
 
-	<!-- <repository>
-		<id>nexus</id>
-		<name>Nexus Proxy Repo</name>
-		<url>http://172.31.7.162:8081/repository/teslaproxy/</url>
-	</repository> -->
+	<repositories>	
+		<repository>
+			<id>nexus</id>
+			<name>Nexus Proxy Repo</name>
+			<url>http://172.31.7.162:8081/repository/teslaproxy/</url>
+		</repository>
+	</repositories>
+	
 
 	<dependencies>
 		
